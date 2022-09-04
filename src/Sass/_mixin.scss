@@ -1,0 +1,5 @@
+@mixin svg($property1, $property2, $property3, $size, $color) {
+  #{$property1}: $size;
+  #{$property2}: $size;
+  #{$property3}: $color;
+}

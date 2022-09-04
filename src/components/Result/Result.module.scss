@@ -1,0 +1,10 @@
+.result {
+  grid-column: 1 /2;
+  grid-row: 2/-1;
+
+  background-color: #fff;
+  padding: 2rem 0 3rem;
+
+  display: flex;
+  flex-direction: column;
+}

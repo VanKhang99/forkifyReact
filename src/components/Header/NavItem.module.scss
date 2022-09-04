@@ -1,0 +1,48 @@
+@import "../../Sass//variables";
+@import "../../Sass/mixin";
+
+.nav {
+  align-self: stretch;
+  margin-right: 2.5rem;
+
+  &List {
+    height: 100%;
+    list-style-type: none;
+  }
+
+  &Item {
+    position: relative;
+    height: 100%;
+
+    &:hover > :nth-child(2) {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.navButton {
+  font-size: 1.4rem;
+  height: 100%;
+  padding: 0 1.5rem;
+  text-transform: uppercase;
+  transition: $transition;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $color-grey-light-2;
+  }
+
+  & > :first-child {
+    margin-right: 0.7rem;
+  }
+
+  svg {
+    @include svg(width, height, fill, 2.4rem, $color-primary);
+    transform: translateY(-1px);
+  }
+
+  span {
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,36 @@
+@import "../../Sass//variables";
+@import "../../Sass/mixin";
+
+.recipeIngredients {
+  background-color: $color-grey-light-2;
+  padding: 5rem 8rem;
+  line-height: 1.4;
+
+  .ingredients {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem 3rem;
+  }
+
+  .ingredient {
+    display: flex;
+    align-items: flex-start;
+
+    font-size: 1.6rem;
+
+    &Quantity {
+      margin-right: 5px;
+    }
+
+    svg {
+      flex: none;
+      margin: 1px 11px 0 0;
+      @include svg(width, height, fill, 2rem, $color-primary);
+    }
+
+    span {
+      flex-shrink: 0;
+      display: inline-block;
+    }
+  }
+}

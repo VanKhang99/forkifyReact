@@ -1,0 +1,72 @@
+@import "../../Sass//variables";
+@import "../../Sass/mixin";
+
+.recipeDetails {
+  display: flex;
+  align-items: center;
+
+  padding: 7.5rem 8rem 3.5rem;
+  text-transform: uppercase;
+  font-size: 1.65rem;
+
+  span {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .recipeTime {
+    margin-right: 4.5rem;
+  }
+
+  .recipeTime,
+  .recipeServings {
+    display: flex;
+    align-items: center;
+
+    svg {
+      @include svg(width, height, fill, 2.35rem, $color-primary);
+      margin-right: 1.15rem;
+    }
+  }
+
+  .recipeButtons {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+
+    margin-left: 1.6rem;
+    transform: translateY(-1px);
+
+    button {
+      display: flex;
+      align-items: center;
+    }
+
+    svg {
+      @include svg(width, height, fill, 2rem, $color-primary);
+    }
+  }
+
+  .recipeUser {
+    flex: 1;
+
+    &Generated {
+      margin-right: 1.75rem;
+      margin-left: auto;
+      height: 4rem;
+      width: 4rem;
+      border-radius: $border-radius;
+      background-color: $color-grey-light-3;
+    }
+
+    svg {
+      @include svg(width, height, fill, 2.25rem, $color-primary);
+    }
+  }
+
+  .recipeBookmark {
+    svg {
+      @include svg(width, height, fill, 2.5rem, #fff);
+    }
+  }
+}

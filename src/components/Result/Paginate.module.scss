@@ -1,0 +1,45 @@
+@import "../../Sass//variables";
+@import "../../Sass/mixin";
+
+.paginate {
+  margin-top: auto;
+  padding: 0 3.5rem;
+  font-size: 1.3rem;
+  color: $color-primary;
+
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  align-items: center;
+
+  &Btn {
+    display: flex;
+    align-items: center;
+    font-size: inherit;
+
+    &Prev {
+      justify-self: start;
+      grid-column: 1 /2;
+    }
+
+    &Next {
+      justify-self: end;
+      grid-column: 3 /4;
+    }
+
+    svg {
+      @include svg(width, height, fill, 1.6rem, $color-primary);
+      margin-left: 2px;
+    }
+
+    span {
+      font-weight: 700;
+      color: $color-primary;
+      margin: 0 4px;
+    }
+  }
+
+  &Total {
+    grid-column: 2 /3;
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,54 @@
+@import "../../Sass//variables";
+@import "../../Sass/mixin";
+
+.search {
+  background-color: #fff;
+  padding-left: 3rem;
+  border-radius: $border-radius;
+  transition: $transition;
+
+  &:focus-within {
+    transform: translateY(-2px);
+    box-shadow: 0 0.7rem 3rem rgba($color-grey-dark-1, 0.08);
+  }
+}
+
+.searchInput {
+  width: 30rem;
+  font-family: inherit;
+  font-size: 1.7rem;
+  color: inherit;
+  border: none;
+  background: transparent;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: $color-grey-light-4;
+  }
+}
+
+.searchButton {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  padding: 1.5rem 4rem;
+  text-transform: uppercase;
+  border-radius: $border-radius;
+  background-image: $gradient;
+  transition: $transition;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  svg {
+    @include svg(width, height, fill, 2.25rem, #fff);
+  }
+
+  & > :first-child {
+    margin-right: 1rem;
+  }
+}

@@ -1,0 +1,117 @@
+@import "../../Sass//variables";
+@import "../../Sass/mixin";
+
+.addRecipeWrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.4);
+
+  visibility: hidden;
+  opacity: 0;
+  transition: $transition;
+
+  &.open {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .addRecipe {
+    position: relative;
+    width: 100rem;
+    z-index: 1000;
+    padding: 5rem 6rem;
+    border-radius: 9px;
+    background-color: #fff;
+    box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.25);
+    transition: $transition;
+
+    :global(.message) {
+      margin: 0;
+    }
+  }
+}
+
+.upload {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 4rem 6rem;
+
+  &Column {
+    display: grid;
+    grid-template-columns: 1fr 2.8fr;
+    gap: 1.5rem;
+  }
+
+  &FormatError {
+    grid-column: 1/-1;
+    font-size: 1.5rem;
+    color: red;
+  }
+
+  &Heading {
+    grid-column: 1/-1;
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+
+  label {
+    color: inherit;
+    font-size: 1.5rem;
+    font-weight: 600;
+    align-self: center;
+  }
+
+  input {
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    padding: 0.8rem 1rem;
+    font-size: 1.5rem;
+    transition: $transition;
+
+    &:focus {
+      background-color: $color-grey-light-1;
+      border: 1px solid $color-primary;
+      outline: none;
+    }
+
+    &::placeholder {
+      color: $color-grey-light-4;
+    }
+  }
+}
+
+.uploadButton {
+  grid-column: 1/-1;
+  justify-self: center;
+
+  padding: 1.5rem 4rem;
+  border-radius: 100rem;
+  color: #fff;
+  background-image: $gradient;
+  transition: $transition;
+
+  gap: 1rem;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  svg {
+    @include svg(width, height, fill, 2.25rem, #fff);
+  }
+
+  span {
+    align-self: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: "Arial";
+  }
+}

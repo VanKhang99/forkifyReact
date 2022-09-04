@@ -1,0 +1,17 @@
+@import "../../Sass//variables";
+
+.copyright {
+  align-self: flex-end;
+
+  p {
+    margin-top: 4rem;
+    padding: 0 3.5rem;
+    font-size: 1.2rem;
+    color: $color-grey-dark-2;
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+}

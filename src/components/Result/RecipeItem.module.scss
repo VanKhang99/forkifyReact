@@ -1,0 +1,113 @@
+@import "../../Sass//variables";
+@import "../../Sass/mixin";
+
+.previewLink {
+  &:link,
+  &:visited {
+    padding: 1.5rem 3.25rem;
+    transition: $transition;
+
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &:hover,
+  &:active {
+    background-color: $color-grey-light-1;
+    transform: translateY(-2px);
+  }
+
+  &.previewLinkActive {
+    background-color: $color-grey-light-1;
+  }
+
+  .previewImg {
+    position: relative;
+
+    &::before {
+      content: "";
+      height: 100%;
+      width: 100%;
+      opacity: 0.4;
+      border-radius: 50%;
+
+      background-image: $gradient;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    img {
+      margin: 0;
+      width: 5.8rem;
+      height: 5.8rem;
+      object-fit: cover;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+  }
+
+  .previewData {
+    flex: 1;
+
+    display: grid;
+    grid-template-columns: 1fr 2rem;
+    align-items: center;
+    row-gap: 1px;
+
+    h4 {
+      grid-column: 1/2;
+
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 22rem;
+
+      font-size: 1.45rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: $color-primary;
+    }
+
+    p {
+      grid-row: 2;
+      font-size: 1.15rem;
+      text-transform: uppercase;
+      color: $color-grey-dark-2;
+      font-weight: 600;
+    }
+  }
+
+  .previewUserGenerated {
+    grid-column: 2;
+    grid-row: 2;
+
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: rgba(242, 239, 238, 0.98);
+
+    svg {
+      @include svg(width, height, fill, 1.2rem, $color-primary);
+    }
+  }
+
+  .previewDelete {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+
+    font-size: 1.6rem;
+    line-height: 1;
+    color: $color-grey-dark-2;
+    transition: $transition;
+    opacity: 0.8;
+
+    &:hover {
+      transform: scale(1.4);
+      color: $color-primary;
+    }
+  }
+}

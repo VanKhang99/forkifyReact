@@ -1,0 +1,174 @@
+@import "../../Sass/variables";
+@import "../../Sass/mixin";
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*
+=============== 
+SPINNER
+===============
+*/
+.spinner {
+  margin: 5rem auto;
+  text-align: center;
+
+  svg {
+    @include svg(width, height, fill, 6rem, $color-primary);
+    animation: rotate 2s infinite linear;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*
+=============== 
+MESSAGE
+===============
+*/
+.message {
+  display: flex;
+
+  max-width: 40rem;
+  height: 15.4rem;
+  padding: 5rem 4rem;
+  font-size: 1.8rem;
+  color: inherit;
+  font-weight: 600;
+  margin: 0 auto;
+  line-height: 1.5;
+
+  svg {
+    flex-shrink: 0;
+    @include svg(width, height, fill, 3rem, $color-primary);
+    transform: translateY(-0.3rem);
+  }
+
+  p {
+    margin-left: 1.5rem;
+  }
+}
+
+/*
+=============== 
+HEADING
+===============
+*/
+.heading--2 {
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-primary;
+}
+
+/*
+=============== 
+BUTTON
+===============
+*/
+button {
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  background-color: unset;
+  cursor: pointer;
+}
+
+.button--tiny {
+  height: 2rem;
+  width: 2rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  svg {
+    height: 100%;
+    width: 100%;
+    transition: $transition;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover svg {
+    fill: $color-grad-2;
+    transform: translateY(-1px);
+  }
+
+  &:active svg {
+    fill: $color-grad-2;
+    transform: translateY(0);
+  }
+}
+
+.button--bookmark {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: $border-radius;
+  background-image: $gradient;
+  transition: $transition;
+
+  &:hover {
+    transform: scale(1.07);
+  }
+}
+
+.button--directions {
+  &:link,
+  &:visited {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #fff;
+    padding: 1.25rem 2.25rem;
+    text-transform: uppercase;
+    border-radius: $border-radius;
+    background-image: $gradient;
+    transition: $transition;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &:hover,
+  &:active {
+    transform: scale(1.05);
+  }
+
+  svg {
+    @include svg(width, height, fill, 1.75rem, #fff);
+  }
+}
+
+.button--page {
+  padding: 0.8rem 1.2rem;
+  border-radius: $border-radius;
+  background-color: $color-grey-light-1;
+  transition: $transition;
+
+  &:hover {
+    color: $color-grad-2;
+    background-color: $color-grey-light-2;
+  }
+}
+
+.button--close-modal {
+  position: absolute;
+  top: 0.5rem;
+  right: 1.6rem;
+
+  font-size: 3.5rem;
+}
