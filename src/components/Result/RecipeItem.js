@@ -14,7 +14,6 @@ function RecipeItem({
   keyCreated,
   isBookmarkList,
 }) {
-  // console.log("third");
   const dispatch = useDispatch();
 
   const handleDelete = () => {
@@ -23,7 +22,6 @@ function RecipeItem({
 
   return (
     <li className={styles.preview}>
-      {/* {console.log("four", idHash === id)} */}
       <a
         href={`#${id}`}
         className={clsx(styles.previewLink, {

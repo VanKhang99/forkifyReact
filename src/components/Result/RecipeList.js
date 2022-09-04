@@ -9,7 +9,6 @@ function RecipeList({ result, isBookmarkList }) {
     const handlerRecipe = () => {
       const idHash = window.location.hash.slice(1);
       if (!idHash) return;
-      // console.log("First");
       setIdHash(idHash);
     };
 
@@ -19,8 +18,6 @@ function RecipeList({ result, isBookmarkList }) {
       window.removeEventListener("hashchange", handlerRecipe);
     };
   }, []);
-
-  // console.log("second", idHash);
 
   return (
     <ul className="results">

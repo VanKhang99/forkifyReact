@@ -12,7 +12,6 @@ function RecipeDetails({
   servings,
   id,
 }) {
-  console.log(cookingTime);
   return (
     <div className={styles.recipeDetails}>
       <div className={styles.recipeTime}>
