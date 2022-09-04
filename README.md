@@ -1,3 +1,11 @@
+# FORKIFY PROJECT
+
+Recipe application with custom recipe uploads, search recipe by name, bookmark recipe, modify servings recipe
+
+# Technology used
+
+HTML, CSS moduled (SCSS), React, Redux-toolkit
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
