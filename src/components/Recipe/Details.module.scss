@@ -21,11 +21,11 @@
   .recipeTime,
   .recipeServings {
     display: flex;
-    align-items: center;
 
     svg {
       @include svg(width, height, fill, 2.35rem, $color-primary);
       margin-right: 1.15rem;
+      transform: translateY(-1px);
     }
   }
 
